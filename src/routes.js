@@ -12,6 +12,10 @@ export default function Router(){
                     path: '',
                     element: <HomePage/>
                 },
+                {
+                    path: 'home',
+                    element: <Navigate to='/'/>
+                },
                 {   
                     path: 'search',
                     element: <HomePage/>,

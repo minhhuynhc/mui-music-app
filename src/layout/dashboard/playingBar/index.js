@@ -1,7 +1,7 @@
 import { Drawer } from "@mui/material";
 import React from "react";
 
-const PlaingBar = () => {
+const PlayingBar = () => {
   return (
     <Drawer
       anchor="bottom"
@@ -13,4 +13,4 @@ const PlaingBar = () => {
   );
 };
 
-export default PlaingBar;
+export default PlayingBar;
