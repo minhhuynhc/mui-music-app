@@ -14,6 +14,11 @@ import { NavLink } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
+
+import AddBoxIcon from "@mui/icons-material/AddBox";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { flexbox } from "@mui/system";
+
 const NAVBAR_WIDTH = "240px";
 const PLAYINGBAR_HEIGHT = "48px";
 const NavBar = () => {
@@ -66,25 +71,42 @@ const NavBar = () => {
         <List></List>
         <ListItem disablePadding>
           <ListItemButton>
-            <ListItemIcon> </ListItemIcon>
+            <ListItemIcon>
+              <AddBoxIcon />{" "}
+            </ListItemIcon>
             <ListItemText primary="Create Playlist" />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton>
-            <ListItemIcon> </ListItemIcon>
+            <ListItemIcon>
+              <Box
+                sx={{
+                  display: 'flex',
+                  background:
+                    "linear-gradient(243deg, rgba(68,56,56,1) 0%, rgba(24,7,45,1) 100%)",
+                  width: "23px",
+                  height: "23px",
+                  borderRadius: '5px',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <FavoriteIcon color="success" fontSize="" />
+              </Box>
+            </ListItemIcon>
             <ListItemText primary="Liked Song" />
           </ListItemButton>
         </ListItem>
       </List>
       <Divider sx={{ marginX: "20px" }} />
       <List
-      className="aloo"
+        className="aloo"
         sx={{
           overflow: "hidden",
           "&::-webkit-scrollbar": {
-            width: '10px',
-            visibility: 'hidden'
+            width: "10px",
+            visibility: "hidden",
           },
           "&::-webkit-scrollbar-thumb": {
             background: "grey",
@@ -92,9 +114,9 @@ const NavBar = () => {
           "&::-webkit-scrollbar-track": {
             background: "black",
           },
-          "&:hover":{
-            overflow:'auto'
-          }
+          "&:hover": {
+            overflow: "auto",
+          },
         }}
       >
         {userPlaylist.map((item) => (

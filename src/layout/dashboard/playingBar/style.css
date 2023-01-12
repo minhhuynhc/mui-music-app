@@ -1,0 +1,8 @@
+.MuiSlider-thumb{
+    display: none;
+  }
+
+
+.MuiSlider-thumb:is(:hover, .Mui-active) {
+    display: block;
+  }

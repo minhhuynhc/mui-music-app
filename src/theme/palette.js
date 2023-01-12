@@ -30,7 +30,7 @@ const INFO ={
 }
 const SUCCESS ={
     light: '#00000',
-    main:'#00000',
+    main:'#FFFFFF',
     dark:'#00000',
     constrastText: '#FFFFFF'
 }
